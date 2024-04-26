@@ -11,7 +11,6 @@ class Car {
 }
 const wagon = new Car('limousine', 'volkswagen', 2020, 'true')
 console.log({wagon});
-// Rental class
 class Rental {
     constructor(car, renterName, rentalStartDate, rentalEndDate) {
         this.car = car;
@@ -27,3 +26,32 @@ class Rental {
 }
 const bus = new Rental ('volkswagen', 'Esther', "2024-4-26", "2024-6-26")
 console.log({bus});
+
+
+
+
+class Rental{
+    constructor(car,rentalName,rentalStart,rentalEnd){
+        this,car=car;
+        this.rentalName=rentalName;
+        this.rentalStrart=rentalStart;
+        this,rentalEnd=rentalEnd;
+    }
+    calculateRentalDuration(){
+        const time = this.rentalEnd-this.rentalStrart
+        return time
+    }
+
+}
+
+const car = { make: 'Toyota', model: 'Hilux' };
+const rentalStart = new Date('2024-04-26');
+const rentalEnd = new Date('2024-06-26');
+
+const rental = new Rental(car, 'Blessing Kagure', rentalStart, rentalEnd);
+const rentalDuration= rentalEnd-rentalStart;
+console.log(`Rental duration is ${rentalDuration} months`);
+
+
+
+
